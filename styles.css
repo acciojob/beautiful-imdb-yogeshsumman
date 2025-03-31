@@ -1,2 +1,63 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark theme for a cinematic feel */
+    color: #fff;
+    overflow-x: hidden;
+}
 
-/* Your CSS Code here. */
+/* Container for layout */
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Movie Poster Styling */
+.moviePic {
+    height: 450px; /* Standard poster height */
+    width: 300px; /* Standard poster width */
+    opacity: 0.9; /* Slight transparency for elegance */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
+}
+
+.moviePic:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Movie Description Styling */
+.movieDetail {
+    position: absolute; /* Centered positioning */
+    top: 50%; /* Vertically centered */
+    width: 60%; /* Reasonable width for readability */
+    text-align: center; /* Centered text */
+    font-size: 1.2em; /* Readable size */
+    transform: translateY(-50%); /* Offset for true centering */
+    color: #e0e0e0; /* Light gray for contrast */
+    line-height: 1.6; /* Improved readability */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent backdrop */
+    padding: 20px; /* Comfortable spacing */
+    border-radius: 8px; /* Subtle rounding */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .moviePic {
+        height: 300px;
+        width: 200px;
+    }
+
+    .movieDetail {
+        width: 80%;
+        font-size: 1em;
+    }
+}
